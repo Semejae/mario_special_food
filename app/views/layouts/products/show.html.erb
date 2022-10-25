@@ -1,4 +1,24 @@
 <h1><%= @product.name %></h1>
+<h1><%= @product.cost %></h1>
+<h1><%= @product.country_of_origin %></h1>
+
+<% if @product.reviews.any? %>
+  <h4>Here are the reviews for this product:</h4>
+
+  <% @product.reviews.each do |review| %>
+    <ul>
+      <li>
+      <% link_to review.author, product_review_path(@product, review) %>
+      </li>
+    </ul>
+  <% end %>
+<% else %>
+  <p>No songs are listed for this product.</p>
+<% end %>
+
+<%= button_to "Add Song to Album",
+              new_product_review_path(@product),
+              method: :get %>
 
 <%= button_to "Edit product", 
               edit_album_path(@product),
