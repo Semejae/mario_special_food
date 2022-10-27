@@ -13,7 +13,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new
     if @product.save
-      redirect_to product_path
+      redirect_to root_path
     else
       render :new
     end

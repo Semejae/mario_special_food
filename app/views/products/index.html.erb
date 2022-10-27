@@ -1,8 +1,9 @@
+
 <h1>Products</h1>
 
-<% if @products.any? %>
+<% if @product.any? %>
   <ul>
-    <% @products.each do |product| %>
+    <% @product.each do |product| %>
     <li><%= link_to product.name, product_path(product) %></li>
     <% end %>
   </ul>
@@ -13,4 +14,8 @@
 
 <%= button_to "Create new product", 
               new_product_path,
+              method: :get %>
+
+<%= button_to "Go to home page",
+              root_path,
               method: :get %>

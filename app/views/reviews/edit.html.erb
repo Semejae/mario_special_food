@@ -1,0 +1,18 @@
+<h1>Edit review:</h1>
+<% if @review.errors.any? %>
+  <h3>fix errors:</h3>
+  <ul>
+    <@review.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+
+<%= form_for [@product, @review] do |f| %>
+  <%= f.label :author %>
+  <%= f.text_field :author %>
+  <%= f.label :content_body %>
+  <%= f.text_field :content body %>
+  <%= f.label :rating %>
+  <%= f.number_field :rating %>
+  <p><%= f.submit %></p>
+<% end %>
