@@ -13,6 +13,6 @@
   <%= f.label :content_body %>
   <%= f.text_field :content body %>
   <%= f.label :rating %>
-  <%= f.number_field :rating %>
+  <%= f.number_field :rating, min: 1, max: 5 %>
   <p><%= f.submit %></p>
 <% end %>
