@@ -1,9 +1,9 @@
 
 <h1>Products</h1>
 
-<% if @product.any? %>
+<% if @products.any? %>
   <ul>
-    <% @product.each do |product| %>
+    <% @products.each do |product| %>
     <li><%= link_to product.name, product_path(product) %></li>
     <% end %>
   </ul>

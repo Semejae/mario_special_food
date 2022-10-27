@@ -5,7 +5,6 @@ class ReviewsController < ApplicationController
     @review = @product.reviews.new
     render :new
   end
-end
 
   def create
     @product = Product.find(params[:product_id])
@@ -50,3 +49,4 @@ end
     def review_params
       params.require(:review).permit(:author, :content_body, :rating)
     end
+end

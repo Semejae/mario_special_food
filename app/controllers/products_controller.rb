@@ -1,8 +1,8 @@
 class ProductsController < ApplicationController
 
   def index
-    @product = Product.all
-    render :index
+    @products = Product.all
+    render :homepage
   end
 
   def new
@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
   end
   
   def create
-    @product = Product.new
+    @product = Product.new(product_params)
     if @product.save
       redirect_to root_path
     else
@@ -26,6 +26,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    # binding.pry
     render :show
   end
 
@@ -41,7 +42,7 @@ class ProductsController < ApplicationController
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
-    redirect_to product_path
+    redirect_to products_path
   end
 
   private 
