@@ -13,10 +13,10 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     if @product.save
-      redirect_to root_path
+      flash[:notice] = "product created!"
+      redirect_to products_path
     else
       render :new
-    end
   end
 
   def edit
@@ -26,14 +26,14 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    # binding.pry
     render :show
   end
 
   def update
     @product = Product.find(params[:id])
     if @product.update(product_params)
-      redirect_to product_path
+      flash[:notice]= "product updated!"
+      redirect_to products_path
     else
       render :edit
     end
@@ -42,6 +42,7 @@ class ProductsController < ApplicationController
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
+    flash[:notice]= "product deleted!"
     redirect_to products_path
   end
 
@@ -49,5 +50,5 @@ class ProductsController < ApplicationController
   def product_params
     params.require(:product).permit(:name, :cost, :country_of_origin)
   end
-
+end
 end
