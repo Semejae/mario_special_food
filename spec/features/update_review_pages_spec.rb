@@ -10,6 +10,6 @@ describe "update review process", type: :feature do
     fill_in 'Content body', with: 'Est qui est commodi praesentium unde omnis aut est cupiditate veniam pariatur iusto tempora et harum omnis non nihil quasi et quos a ab non.'
     fill_in 'Rating', with: 5
     click_on 'Update Review'
-    expect(page).to have_content 'Kacie'
+    expect(page).to have_content 'Est qui est commodi praesentium unde omnis aut est cupiditate veniam pariatur iusto tempora et harum omnis non nihil quasi et quos a ab non.'
   end
 end
