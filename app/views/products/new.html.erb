@@ -2,10 +2,11 @@
 <% if @product.errors.any? %>
   <h3>fix errors:</h3>
   <ul>
-    <@product.errors.full_messages.each do |message| %>
+    <% @product.errors.full_messages.each do |message| %>
       <li><%= message %></li>
     <% end %>
   </ul>
+<% end %>
 
 <%= form_for @product do |f| %>
   <%= f.label :name %>

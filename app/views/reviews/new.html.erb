@@ -3,9 +3,10 @@
 <% if @review.errors.any? %>
   <h3>fix errors:</h3>
   <ul>
-    <@review.errors.full_messages.each do |message| %>
+    <% @review.errors.full_messages.each do |message| %>
       <li><%= message %></li>
   </ul>
+<% end %>
 <% end %>
 
 <%= form_for [@product, @review] do |f| %>

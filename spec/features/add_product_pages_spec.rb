@@ -8,13 +8,14 @@ describe "the add a product process" do
     fill_in 'Country of origin', :with => 'USA'
     fill_in 'Cost', :with => '5'
     click_on 'Create Product'
-    expect(page).to have_content 'product created!'
     expect(page).to have_content 'Mic'
   end
 
   it "gives a error message when no name is entered" do
     visit new_product_path
     click_on 'Create Product'
-    expect(page).to have_content "No name entered"
+    expect(page).to have_content "Name can't be blank"
+    expect(page).to have_content "Cost can't be blank"
+    expect(page).to have_content "Country of origin can't be blank"
   end
 end

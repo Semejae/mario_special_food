@@ -29,3 +29,11 @@
     </p>
   <% end %>
 </ul>
+
+<%= button_to "Create new product", 
+              new_product_path,
+              method: :get %>
+
+<%= button_to "Go to home page",
+              root_path,
+              method: :get %>

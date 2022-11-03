@@ -17,6 +17,7 @@ class ProductsController < ApplicationController
       redirect_to products_path
     else
       render :new
+    end
   end
 
   def edit
@@ -51,4 +52,4 @@ class ProductsController < ApplicationController
     params.require(:product).permit(:name, :cost, :country_of_origin)
   end
 end
-end
+

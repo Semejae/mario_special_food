@@ -10,7 +10,6 @@ describe "update review process", type: :feature do
     fill_in 'Content body', with: 'blah'
     fill_in 'Rating', with: 5
     click_on 'Update Review'
-    expect(page).to have_content 'review updated'
     expect(page).to have_content 'Kacie'
   end
 end

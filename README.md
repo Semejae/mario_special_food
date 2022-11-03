@@ -19,15 +19,16 @@ _this is a page that lets user create products and give user reviews_
 
 ## Setup/Installation Requirements
 * _within your terminal, navigate to your desktop_
-* _Use 'git clone [instert my repository's http link] to add my code to your device_
+* _Use `$ git clone https://github.com/Semejae/volunteers.git` to add my code to your device_
 * _navigate to the file within your file explorer_
 * _Open file in your VS Code to edit_
 * _To edit but not make perminant changes, create a new branch using 'git branch [new-branch-name]'_
-* _Switch to that branch and edit away by using 'git checkout [branch-you'd-like-to-change-to]'_
-* _Create GEMfile file_  
-* _Bundle install
-* _git commit -m ""_
-* _also you can view the website @ https://github.com/Semejae/volunteers.git
+* _Switch to that branch and edit away by using 'git checkout [branch-you'd-like-to-change-to]'_ 
+* _`$ bundle install`
+* `$ rake db:setup`
+* Run the Rails Server with `$ rails s`
+* Visit the app in the browser at: localhost:3000/
+
 
 ## known bugs
 * _N/A_

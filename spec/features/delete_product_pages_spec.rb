@@ -5,7 +5,6 @@ describe "delete a product", type: :feature do
     test_product = Product.create(name: 'Mic', cost: '15', country_of_origin: 'USA')
     visit product_path(test_product)
     click_on 'Delete product'
-    expect(page).to have_content 'product deleted'
     expect(page).not_to have_content 'Mic'
   end
 end
