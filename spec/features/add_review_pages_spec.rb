@@ -8,7 +8,7 @@ describe "add a product review path", type: :feature do
     click_on 'Add Review to Product'
     fill_in 'Author', with: 'Anthony'
     fill_in 'Rating', with: '5'
-    fill_in 'Content body', with: 'blah'
+    fill_in 'Content body', with: 'Est qui est commodi praesentium unde omnis aut est cupiditate veniam pariatur iusto tempora et harum omnis non nihil quasi et quos a ab non.'
     click_on 'Create Review'
     expect(page).to have_content "Est qui est commodi praesentium unde omnis aut est cupiditate veniam pariatur iusto tempora et harum omnis non nihil quasi et quos a ab non."
   end
