@@ -2,7 +2,7 @@
 
 ### by_**{Anthony-Gladden}**_
 
-### _{this is a page that lets user create a products with reviews}_
+### _{A web application providing CRUD functionality for the store's products. Also each product can also have reviews added to it.}_
 
 
 ## technologies used 
@@ -13,6 +13,7 @@
 * _sinatra_
 * _capybara_
 * _postgres_
+* _faker_
 
 ## Description 
 _this is a page that lets user create products and give user reviews_
